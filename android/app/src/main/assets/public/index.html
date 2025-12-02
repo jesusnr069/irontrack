@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#18181b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>IronTrack Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#09090b',
+              surface: '#18181b',
+              primary: '#6366f1', // Indigo 500
+              secondary: '#a1a1aa',
+              accent: '#8b5cf6', // Violet 500
+              success: '#22c55e',
+              danger: '#ef4444',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Base Mobile Optimizations */
+      body {
+        background-color: #09090b;
+        color: #f4f4f5;
+        overscroll-behavior-y: none; /* Disable pull-to-refresh */
+        -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+        -webkit-user-select: none; /* Disable text selection */
+        user-select: none;
+        touch-action: manipulation; /* Disable double-tap zoom */
+        font-family: 'Inter', system-ui, sans-serif;
+      }
+
+      /* Input fields should allow selection */
+      input, textarea {
+        -webkit-user-select: text;
+        user-select: text;
+      }
+
+      /* Scrollbar Hiding */
+      ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        display: none;
+      }
+      * {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+      }
+      
+      /* Safe Area Utilities */
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 20px);
+      }
+      
+      /* Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideInFromBottom {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      @keyframes slideInFromTop {
+        from { transform: translateY(-10px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      @keyframes zoomIn {
+        from { transform: scale(0.95); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+      .animate-in {
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+      }
+      .fade-in {
+        animation-name: fadeIn;
+      }
+      .slide-in-from-bottom-5 {
+        animation-name: slideInFromBottom;
+      }
+      .slide-in-from-top-2 {
+        animation-name: slideInFromTop;
+      }
+      .zoom-in-95 {
+        animation-name: zoomIn;
+      }
+      .slide-in-from-bottom-10 {
+        animation-name: slideInFromBottom;
+      }
+
+      /* Confetti Animation */
+      .confetti {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: -10%;
+          animation: drop 3s infinite linear;
+      }
+      @keyframes drop {
+          0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+          100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0?external=react",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/?external=react",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?external=react",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react",
+    "recharts": "https://esm.sh/recharts@2.12.0?external=react,react-dom"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root" class="h-full"></div>
+  </body>
+</html>
