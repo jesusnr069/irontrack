@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - IronTrack Pro</title>
+</head>
+<body>
+
+    <!-- Contenedor Principal -->
+    <main class="container">
+        
+        <!-- Encabezado con Resumen del Día -->
+        <header class="dashboard-header">
+            <div class="user-greeting">
+                <h1>Hola, Atleta</h1>
+                <p>Resumen de hoy</p>
+            </div>
+            
+            <div class="daily-summary-card">
+                <div class="summary-item">
+                    <span class="label">Entrenamientos</span>
+                    <span class="value">0</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Minutos</span>
+                    <span class="value">0</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Volumen</span>
+                    <span class="value">0 kg</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sección de Acciones Principales -->
+        <section class="actions-section">
+            <!-- Tarjeta de Iniciar Entrenamiento -->
+            <div class="card start-workout-card">
+                <h2>¿Listo para entrenar?</h2>
+                <button type="button" class="btn-primary">
+                    Iniciar Entrenamiento
+                </button>
+            </div>
+
+            <!-- Botones de Navegación Rápida -->
+            <div class="quick-actions-grid">
+                <button type="button" class="btn-secondary">
+                    Ver Historial
+                </button>
+                <button type="button" class="btn-secondary">
+                    Ver Estadísticas
+                </button>
+            </div>
+        </section>
+
+        <!-- Sección de Últimos Ejercicios / Actividad Reciente -->
+        <section class="recent-activity-section">
+            <h3>Últimos Ejercicios</h3>
+            
+            <div class="activity-list">
+                <!-- Item 1 -->
+                <article class="activity-card">
+                    <div class="activity-info">
+                        <h4>Día de Pecho</h4>
+                        <span class="date">Hace 2 días</span>
+                    </div>
+                    <div class="activity-stats">
+                        <span>4 Ejercicios</span>
+                        <span>45 min</span>
+                    </div>
+                </article>
+
+                <!-- Item 2 -->
+                <article class="activity-card">
+                    <div class="activity-info">
+                        <h4>Día de Pierna</h4>
+                        <span class="date">Hace 4 días</span>
+                    </div>
+                    <div class="activity-stats">
+                        <span>5 Ejercicios</span>
+                        <span>60 min</span>
+                    </div>
+                </article>
+
+                <!-- Item 3 -->
+                <article class="activity-card">
+                    <div class="activity-info">
+                        <h4>Cardio & Core</h4>
+                        <span class="date">Hace 1 semana</span>
+                    </div>
+                    <div class="activity-stats">
+                        <span>2 Ejercicios</span>
+                        <span>30 min</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
